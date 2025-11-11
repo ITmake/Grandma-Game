@@ -7,3 +7,9 @@ body {
     background-attachment: fixed;
     animation: clouds 60s linear infinite;
 }
+
+/* Subtle moving clouds effect */
+@keyframes clouds {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 0; }
+}
