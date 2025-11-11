@@ -181,3 +181,11 @@ function updateGame() {
         stone.position.y -= 0.15; // Stones fall slightly faster
         stone.rotation.x += 0.05;
         stone.rotation.y += 0.05;
+
+           if (stone.position.y <= grandma.position.y + 3 &&
+            stone.position.y >= grandma.position.y &&
+            Math.abs(stone.position.x - grandma.position.x) < 1.5) {
+            scene.remove(stone);
+            stones.splice(index, 1);
+            score--; // Decrease score when hitting stones
+            document.getElementById('scoreValue').textContent = score;
