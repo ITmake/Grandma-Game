@@ -27,4 +27,7 @@ function createGrandma() {
     // Arms
     const armGeometry = new THREE.CylinderGeometry(0.2, 0.2, 1.5);
     const armMaterial = new THREE.MeshPhongMaterial({ color: 0x800080 });
-    
+
+    const leftArm = new THREE.Mesh(armGeometry, armMaterial);
+    leftArm.position.set(-1, 1.8, 0);
+    leftArm.rotation.z = Math.PI / 3;
