@@ -127,3 +127,9 @@ function onMouseMove(event) {
     const x = (event.clientX / window.innerWidth) * 20 - 10;
     grandma.position.x = x;
 }
+
+function onTouchMove(event) {
+    event.preventDefault();
+    const x = (event.touches[0].clientX / window.innerWidth) * 20 - 10;
+    grandma.position.x = x;
+}
