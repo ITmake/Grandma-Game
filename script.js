@@ -59,8 +59,9 @@ function init() {
     camera.position.z = 15;
     camera.position.y = 5;
 
-// Create renderer
-    renderer = new THREE.WebGLRenderer();
+/  // Create renderer
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setClearColor(0x000000, 0); // ✅ make background transparent
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById('game-container').appendChild(renderer.domElement);
     
