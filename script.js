@@ -42,3 +42,6 @@ function createGrandma() {
     grandma.add(hair);
     grandma.add(leftArm);
     grandma.add(rightArm);
+
+     // Position grandma
+    grandma.position.y = -4;
