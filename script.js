@@ -229,3 +229,6 @@ function animate() {
     updateGame();
     renderer.render(scene, camera);
 }
+
+init();
+animate();
