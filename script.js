@@ -133,3 +133,9 @@ function onTouchMove(event) {
     const x = (event.touches[0].clientX / window.innerWidth) * 20 - 10;
     grandma.position.x = x;
 }
+
+function updateGame() {
+    // Move and check apples
+    apples.forEach((apple, index) => {
+        apple.position.y -= 0.1;
+        apple.rotation.x += 0.02;
