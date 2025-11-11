@@ -160,3 +160,12 @@ function updateGame() {
     oranges.forEach((orange, index) => {
         orange.position.y -= 0.1;
         orange.rotation.x += 0.02;
+
+     if (orange.position.y <= grandma.position.y + 3 &&
+            orange.position.y >= grandma.position.y &&
+            Math.abs(orange.position.x - grandma.position.x) < 1.5) {
+            scene.remove(orange);
+            oranges.splice(index, 1);
+            score++;
+            document.getElementById('scoreValue').textContent = score;
+        }
