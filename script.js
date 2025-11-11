@@ -223,3 +223,9 @@ function updateGame() {
     // Add subtle animation to grandma
     grandma.rotation.y = Math.sin(Date.now() * 0.002) * 0.1;
 }
+
+function animate() {
+    requestAnimationFrame(animate);
+    updateGame();
+    renderer.render(scene, camera);
+}
