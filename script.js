@@ -86,3 +86,13 @@ scene.add(grandma);
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('touchmove', onTouchMove);
 }
+
+function createApple() {
+    const appleGeometry = new THREE.SphereGeometry(0.5);
+    const appleMaterial = new THREE.MeshPhongMaterial({ color: 0xff0000 });
+    const apple = new THREE.Mesh(appleGeometry, appleMaterial);
+    apple.position.x = Math.random() * 20 - 10;
+    apple.position.y = 10;
+    apple.position.z = 0;
+    scene.add(apple);
+    apples.push(apple);
