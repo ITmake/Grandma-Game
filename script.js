@@ -10,3 +10,9 @@ function createGrandma() {
     const dressMaterial = new THREE.MeshPhongMaterial({ color: 0x800080 }); // Purple dress
     const dress = new THREE.Mesh(dressGeometry, dressMaterial);
     dress.position.y = 1;
+        
+    // Head
+    const headGeometry = new THREE.SphereGeometry(0.5);
+    const headMaterial = new THREE.MeshPhongMaterial({ color: 0xFFE4B5 }); // Skin color
+    const head = new THREE.Mesh(headGeometry, headMaterial);
+    head.position.y = 2.5;
