@@ -1,37 +1,32 @@
 body {
     margin: 0;
     overflow: hidden;
-    /* Sky with soft clouds and sunlight */
     background: linear-gradient(to bottom, #87ceeb 0%, #b0e0e6 70%, #ffffff 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    animation: clouds 60s linear infinite;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Subtle moving clouds effect */
-@keyframes clouds {
-    0% { background-position: 0 0; }
-    100% { background-position: 1000px 0; }
+/* Grass + gravel simulated background */
+body::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35vh;
+    background:
+        radial-gradient(circle at 50% 90%, #b2b2b2 0%, #8b8b8b 20%, transparent 20%) 50% 90%/10% 10% repeat-x,
+        linear-gradient(to bottom, #4caf50 0%, #2e7d32 100%);
+    z-index: -1; /* stays behind everything, even the 3D scene */
 }
 
+/* Game container */
 #game-container {
     width: 100vw;
     height: 100vh;
     position: relative;
-}
-
-/* Ground layer - grass and gravel path illusion */
-#game-container::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 35%;
-    background:
-        radial-gradient(ellipse at center, #b2b2b2 0%, #8b8b8b 25%, transparent 25%) 50% 90%/15% 15% repeat-x, /* gravel path */
-        linear-gradient(to bottom, #4caf50 0%, #2e7d32 100%); /* grass */
-    z-index: 0;
+    z-index: 1; /* ensures it’s above background */
 }
 
 /* Scoreboard box */
@@ -47,5 +42,4 @@ body {
     padding: 10px 20px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 100;
-    font-family: 'Poppins', sans-serif;
 }
