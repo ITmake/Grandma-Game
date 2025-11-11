@@ -33,3 +33,19 @@ body {
         linear-gradient(to bottom, #4caf50 0%, #2e7d32 100%); /* grass */
     z-index: 0;
 }
+
+/* Scoreboard box */
+#score {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: black;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    font-family: 'Poppins', sans-serif;
+}
