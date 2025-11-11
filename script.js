@@ -154,3 +154,9 @@ function updateGame() {
             apples.splice(index, 1);
         }
     });
+
+
+    // Move and check oranges
+    oranges.forEach((orange, index) => {
+        orange.position.y -= 0.1;
+        orange.rotation.x += 0.02;
