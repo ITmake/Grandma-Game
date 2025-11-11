@@ -148,3 +148,9 @@ function updateGame() {
             score++;
             document.getElementById('scoreValue').textContent = score;
         }
+        
+        if (apple.position.y < -6) {
+            scene.remove(apple);
+            apples.splice(index, 1);
+        }
+    });
