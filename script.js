@@ -122,3 +122,8 @@ function createStone() {
     scene.add(stone);
     stones.push(stone);
 }
+
+function onMouseMove(event) {
+    const x = (event.clientX / window.innerWidth) * 20 - 10;
+    grandma.position.x = x;
+}
