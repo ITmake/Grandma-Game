@@ -202,3 +202,9 @@ function updateGame() {
                 }
             });
         }
+        
+        if (stone.position.y < -6) {
+            scene.remove(stone);
+            stones.splice(index, 1);
+        }
+    });
