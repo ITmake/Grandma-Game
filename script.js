@@ -189,3 +189,16 @@ function updateGame() {
             stones.splice(index, 1);
             score--; // Decrease score when hitting stones
             document.getElementById('scoreValue').textContent = score;
+
+             
+            // Flash effect when hit by stone
+            grandma.traverse((child) => {
+                if (child.isMesh) {
+                    const originalColor = child.material.color.getHex();
+                    child.material.color.setHex(0xff0000);
+                    setTimeout(() => {
+                        child.material.color.setHex(originalColor);
+                    }, 200);
+                }
+            });
+        }
