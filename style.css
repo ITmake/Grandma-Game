@@ -1,19 +1,9 @@
 body {
     margin: 0;
     overflow: hidden;
-    background-color: #87CEEB;
-}
-
-#game-container {
-    width: 100vw;
-    height: 100vh;
-}
-
-#score {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 24px;
-    color: white;
-    z-index: 100;
+    /* Sky with soft clouds and sunlight */
+    background: linear-gradient(to bottom, #87ceeb 0%, #b0e0e6 70%, #ffffff 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: clouds 60s linear infinite;
 }
