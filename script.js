@@ -81,3 +81,8 @@ scene.add(grandma);
     ground.rotation.x = -Math.PI / 2;
     ground.position.y = -6;
     scene.add(ground);
+
+ // Event listeners
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('touchmove', onTouchMove);
+}
