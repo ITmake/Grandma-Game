@@ -50,10 +50,6 @@ function createGrandma() {
     return grandma;
 }
 
-scene.add(grandma);
-    return grandma;
-}
-
 function init() {
     // Create scene
     scene = new THREE.Scene();
@@ -100,4 +96,15 @@ function createApple() {
     apple.position.z = 0;
     scene.add(apple);
     apples.push(apple);
+}
+
+function createOrange() {
+    const orangeGeometry = new THREE.SphereGeometry(0.5);
+    const orangeMaterial = new THREE.MeshPhongMaterial({ color: 0xff6700 });
+    const orange = new THREE.Mesh(orangeGeometry, orangeMaterial);
+    orange.position.x = Math.random() * 20 - 10;
+    orange.position.y = 10;
+    orange.position.z = 0;
+    scene.add(orange);
+    oranges.push(orange);
 }
