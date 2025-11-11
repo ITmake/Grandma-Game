@@ -45,3 +45,7 @@ function createGrandma() {
 
      // Position grandma
     grandma.position.y = -4;
+
+    scene.add(grandma);
+    return grandma;
+}
