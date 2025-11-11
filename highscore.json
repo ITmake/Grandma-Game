@@ -5,10 +5,3 @@
   "main": "src/index.html",
   "scripts": {
     "start": "open src/index.html"
-  },
-  "dependencies": {},
-  "devDependencies": {},
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
-}
