@@ -139,3 +139,12 @@ function updateGame() {
     apples.forEach((apple, index) => {
         apple.position.y -= 0.1;
         apple.rotation.x += 0.02;
+         
+        if (apple.position.y <= grandma.position.y + 3 &&
+            apple.position.y >= grandma.position.y &&
+            Math.abs(apple.position.x - grandma.position.x) < 1.5) {
+            scene.remove(apple);
+            apples.splice(index, 1);
+            score++;
+            document.getElementById('scoreValue').textContent = score;
+        }
