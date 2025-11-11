@@ -1,13 +1,26 @@
 body {
     margin: 0;
     overflow: hidden;
-    background: linear-gradient(to bottom, #87ceeb 0%, #b0e0e6 70%, #ffffff 100%);
+    font-family: 'Poppins', sans-serif;
+
+    /* Bright blue sky with subtle clouds */
+    background:
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.8) 0%, transparent 40%),
+        radial-gradient(circle at 30% 10%, rgba(255, 255, 255, 0.7) 0%, transparent 40%),
+        linear-gradient(to bottom, #87ceeb 0%, #a4d4f2 60%, #b0e0e6 80%, #e0f7fa 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: 'Poppins', sans-serif;
+    background-size: cover;
+    animation: moveClouds 80s linear infinite;
 }
 
-/* Grass + gravel simulated background */
+/* Soft cloud drifting effect */
+@keyframes moveClouds {
+    0% { background-position: 0 0, 0 0, 0 0; }
+    100% { background-position: 2000px 0, -1500px 0, 0 0; }
+}
+
+/* Ground layer (grass + gravel) */
 body::after {
     content: '';
     position: fixed;
@@ -16,9 +29,9 @@ body::after {
     width: 100%;
     height: 35vh;
     background:
-        radial-gradient(circle at 50% 90%, #b2b2b2 0%, #8b8b8b 20%, transparent 20%) 50% 90%/10% 10% repeat-x,
+        radial-gradient(circle at 50% 90%, #b2b2b2 0%, #8b8b8b 20%, transparent 20%) 50% 90%/12% 12% repeat-x,
         linear-gradient(to bottom, #4caf50 0%, #2e7d32 100%);
-    z-index: -1; /* stays behind everything, even the 3D scene */
+    z-index: -1; /* stays behind the game */
 }
 
 /* Game container */
@@ -26,10 +39,10 @@ body::after {
     width: 100vw;
     height: 100vh;
     position: relative;
-    z-index: 1; /* ensures it’s above background */
+    z-index: 1; /* ensures WebGL canvas is above background */
 }
 
-/* Scoreboard box */
+/* Score box */
 #score {
     position: fixed;
     top: 20px;
