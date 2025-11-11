@@ -169,3 +169,15 @@ function updateGame() {
             score++;
             document.getElementById('scoreValue').textContent = score;
         }
+
+        if (orange.position.y < -6) {
+            scene.remove(orange);
+            oranges.splice(index, 1);
+        }
+    });
+
+     // Move and check stones
+    stones.forEach((stone, index) => {
+        stone.position.y -= 0.15; // Stones fall slightly faster
+        stone.rotation.x += 0.05;
+        stone.rotation.y += 0.05;
