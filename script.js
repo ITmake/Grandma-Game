@@ -54,6 +54,10 @@ scene.add(grandma);
     return grandma;
 }
 
+function init() {
+    // Create scene
+    scene = new THREE.Scene();
+
 // Create camera
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 15;
@@ -96,3 +100,4 @@ function createApple() {
     apple.position.z = 0;
     scene.add(apple);
     apples.push(apple);
+}
