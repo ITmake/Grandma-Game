@@ -31,3 +31,7 @@ function createGrandma() {
     const leftArm = new THREE.Mesh(armGeometry, armMaterial);
     leftArm.position.set(-1, 1.8, 0);
     leftArm.rotation.z = Math.PI / 3;
+    
+    const rightArm = new THREE.Mesh(armGeometry, armMaterial);
+    rightArm.position.set(1, 1.8, 0);
+    rightArm.rotation.z = -Math.PI / 3;
