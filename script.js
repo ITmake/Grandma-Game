@@ -113,3 +113,12 @@ function createStone() {
     const stoneGeometry = new THREE.DodecahedronGeometry(0.5);
     const stoneMaterial = new THREE.MeshPhongMaterial({ 
         color: 0x666666,
+             
+    });
+    const stone = new THREE.Mesh(stoneGeometry, stoneMaterial);
+    stone.position.x = Math.random() * 20 - 10;
+    stone.position.y = 10;
+    stone.position.z = 0;
+    scene.add(stone);
+    stones.push(stone);
+}
