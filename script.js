@@ -64,3 +64,5 @@ scene.add(grandma);
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById('game-container').appendChild(renderer.domElement);
     
+ // Replace basket creation with grandma
+    grandma = createGrandma();
