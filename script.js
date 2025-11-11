@@ -208,3 +208,14 @@ function updateGame() {
             stones.splice(index, 1);
         }
     });
+
+     // Create new objects randomly
+    if (Math.random() < 0.02) {
+        createApple();
+    }
+    if (Math.random() < 0.02) {
+        createOrange();
+    }
+    if (Math.random() < 0.01) { // Stones appear less frequently
+        createStone();
+    }
