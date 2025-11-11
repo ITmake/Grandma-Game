@@ -35,3 +35,10 @@ function createGrandma() {
     const rightArm = new THREE.Mesh(armGeometry, armMaterial);
     rightArm.position.set(1, 1.8, 0);
     rightArm.rotation.z = -Math.PI / 3;
+
+    // Add all parts to grandma group
+    grandma.add(dress);
+    grandma.add(head);
+    grandma.add(hair);
+    grandma.add(leftArm);
+    grandma.add(rightArm);
