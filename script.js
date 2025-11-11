@@ -108,3 +108,8 @@ function createOrange() {
     scene.add(orange);
     oranges.push(orange);
 }
+
+function createStone() {
+    const stoneGeometry = new THREE.DodecahedronGeometry(0.5);
+    const stoneMaterial = new THREE.MeshPhongMaterial({ 
+        color: 0x666666,
