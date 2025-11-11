@@ -219,3 +219,7 @@ function updateGame() {
     if (Math.random() < 0.01) { // Stones appear less frequently
         createStone();
     }
+
+    // Add subtle animation to grandma
+    grandma.rotation.y = Math.sin(Date.now() * 0.002) * 0.1;
+}
