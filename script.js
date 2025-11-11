@@ -49,3 +49,7 @@ function createGrandma() {
     scene.add(grandma);
     return grandma;
 }
+
+scene.add(grandma);
+    return grandma;
+}
